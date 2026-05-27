@@ -29,35 +29,51 @@
   }
   * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
   body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
+
+  /* HEADER */
   .app-header { position: sticky; top: 0; z-index: 100; background: rgba(15,23,42,0.95); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 14px 16px 10px; }
   .header-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
   .app-title { font-size: 17px; font-weight: 700; color: var(--text); letter-spacing: -0.3px; }
   .stats-row { display: flex; gap: 8px; }
   .stat-pill { background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 4px 12px; font-size: 12px; color: var(--text2); }
   .stat-pill b { color: var(--text); }
+
+  /* FILTERS */
   .filter-scroll { display: flex; gap: 8px; overflow-x: auto; padding: 10px 16px 0; scrollbar-width: none; }
   .filter-scroll::-webkit-scrollbar { display: none; }
   .filter-btn { flex-shrink: 0; background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 6px 14px; font-size: 13px; color: var(--text2); cursor: pointer; white-space: nowrap; transition: all 0.15s; }
   .filter-btn.active { background: var(--accent); border-color: var(--accent); color: #0f172a; font-weight: 600; }
   .filter-btn:active { transform: scale(0.95); }
+
+  /* CONTENT */
   .content { padding: 16px; max-width: 680px; margin: 0 auto; }
+
+  /* PROGRESS BAR */
   .progress-wrap { margin-bottom: 16px; }
   .progress-label { display: flex; justify-content: space-between; font-size: 12px; color: var(--text3); margin-bottom: 6px; }
   .progress-bar { height: 4px; background: var(--surface2); border-radius: 4px; overflow: hidden; }
   .progress-fill { height: 100%; background: var(--success); border-radius: 4px; transition: width 0.4s ease; }
+
+  /* GROUP */
   .group { margin-bottom: 20px; }
   .group-header { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
   .company-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
   .group-label { font-size: 12px; font-weight: 600; color: var(--text2); text-transform: uppercase; letter-spacing: 0.06em; }
   .group-count { font-size: 11px; color: var(--text3); background: var(--surface2); border-radius: 10px; padding: 1px 7px; }
+
+  /* STORE CARD */
   .store-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 12px 14px; margin-bottom: 8px; display: flex; gap: 12px; transition: border-color 0.2s, background 0.2s; border-left-width: 3px; }
   .store-card.status-applied { background: var(--success-bg); border-color: rgba(34,197,94,0.3); border-left-color: var(--success); }
   .store-card.status-visited { background: var(--info-bg); border-color: rgba(56,189,248,0.3); border-left-color: var(--accent); }
   .store-card.status-both { background: rgba(34,197,94,0.15); border-color: rgba(34,197,94,0.4); border-left-color: var(--success); }
+
+  /* CHECKBOXES */
   .checks { display: flex; flex-direction: column; gap: 8px; padding-top: 1px; min-width: 52px; }
   .check-item { display: flex; flex-direction: column; align-items: center; gap: 2px; cursor: pointer; }
   .check-item input[type=checkbox] { width: 20px; height: 20px; cursor: pointer; accent-color: var(--success); border-radius: 4px; }
   .check-label { font-size: 9px; color: var(--text3); text-transform: uppercase; letter-spacing: 0.03em; text-align: center; line-height: 1.2; }
+
+  /* STORE INFO */
   .store-info { flex: 1; min-width: 0; }
   .store-name { font-size: 14px; font-weight: 600; color: var(--text); line-height: 1.3; margin-bottom: 2px; }
   .store-addr { font-size: 12px; color: var(--text2); margin-bottom: 6px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
@@ -69,6 +85,8 @@
   .badge-visited { background: var(--info-bg); color: var(--accent); border: 1px solid rgba(56,189,248,0.2); }
   .apply-link { display: inline-flex; align-items: center; gap: 4px; font-size: 11px; color: var(--accent); text-decoration: none; padding: 3px 0; }
   .apply-link:active { opacity: 0.7; }
+
+  /* COMPANY COLORS */
   .dot-tmobile { background: #E20074; }
   .dot-att { background: #009FDB; }
   .dot-verizon { background: #CD040B; }
@@ -81,20 +99,39 @@
   .left-spectrum { border-left-color: #0063A3 !important; }
   .left-bestbuy { border-left-color: #0046BE !important; }
   .left-apple { border-left-color: #888 !important; }
+
+  /* EMPTY */
   .empty { text-align: center; padding: 3rem 1rem; color: var(--text3); font-size: 14px; }
+
+  /* INSTALL BANNER */
+  .install-banner { background: var(--surface2); border: 1px solid var(--border2); border-radius: var(--radius); padding: 12px 16px; margin-bottom: 16px; display: flex; align-items: center; gap: 12px; }
+  .install-banner.hidden { display: none; }
+  .install-icon { font-size: 24px; }
+  .install-text { flex: 1; }
+  .install-text p { font-size: 13px; color: var(--text2); margin-top: 2px; }
+  .install-title { font-size: 14px; font-weight: 600; color: var(--text); }
+  .install-btn { background: var(--accent); color: #0f172a; border: none; border-radius: var(--radius-sm); padding: 7px 14px; font-size: 13px; font-weight: 600; cursor: pointer; white-space: nowrap; flex-shrink: 0; }
+  .install-close { background: transparent; border: none; color: var(--text3); font-size: 18px; cursor: pointer; padding: 4px; flex-shrink: 0; }
+
+  /* iOS tip */
   .ios-tip { background: var(--surface2); border: 1px solid var(--border2); border-radius: var(--radius); padding: 12px 16px; margin-bottom: 16px; font-size: 13px; color: var(--text2); line-height: 1.6; }
   .ios-tip.hidden { display: none; }
   .ios-tip strong { color: var(--text); }
   .ios-tip-close { float: right; background: none; border: none; color: var(--text3); font-size: 16px; cursor: pointer; margin-left: 8px; }
+
+  /* RESET BTN */
   .reset-btn { background: transparent; border: 1px solid var(--border2); border-radius: var(--radius-sm); padding: 6px 12px; font-size: 12px; color: var(--text3); cursor: pointer; }
   .reset-btn:active { opacity: 0.7; }
 </style>
 </head>
 <body>
+
 <div class="app-header">
   <div class="header-top">
     <div class="app-title">Job Application Tracker</div>
-    <button class="reset-btn" onclick="resetAll()">Reset all</button>
+    <div style="display:flex;gap:6px;align-items:center;">
+      <button class="reset-btn" onclick="resetAll()">Reset all</button>
+    </div>
   </div>
   <div class="stats-row">
     <div class="stat-pill">Applied: <b id="cnt-applied">0</b></div>
@@ -102,87 +139,277 @@
     <div class="stat-pill">Total: <b id="cnt-total">0</b></div>
   </div>
 </div>
+
 <div class="filter-scroll" id="filters"></div>
+
 <div class="content">
   <div class="progress-wrap">
     <div class="progress-label"><span>Applications submitted</span><span id="prog-label">0 / 0</span></div>
     <div class="progress-bar"><div class="progress-fill" id="prog-fill" style="width:0%"></div></div>
   </div>
-  <div class="ios-tip hidden" id="ios-tip">
-    <button class="ios-tip-close" onclick="document.getElementById('ios-tip').classList.add('hidden')">x</button>
-    <strong>Add to Home Screen (iOS):</strong><br>
-    Tap the <strong>Share</strong> button in Safari, then tap <strong>Add to Home Screen</strong>.
+
+  <div class="install-banner hidden" id="install-banner">
+    <div class="install-icon">📱</div>
+    <div class="install-text">
+      <div class="install-title">Add to Home Screen</div>
+      <p>Install this tracker as an app on your phone.</p>
+    </div>
+    <button class="install-btn" id="install-btn">Install</button>
+    <button class="install-close" onclick="document.getElementById('install-banner').classList.add('hidden')">✕</button>
   </div>
+
+  <div class="ios-tip hidden" id="ios-tip">
+    <button class="ios-tip-close" onclick="document.getElementById('ios-tip').classList.add('hidden')">✕</button>
+    <strong>Add to Home Screen (iOS):</strong><br>
+    Tap the <strong>Share</strong> button (box with arrow) in Safari, then tap <strong>"Add to Home Screen"</strong>. Your progress saves automatically.
+  </div>
+
   <div id="list"></div>
 </div>
+
 <script>
 const STORES = [
-  {id:1,co:"T-Mobile",name:"T-Mobile - Whittier Blvd (The Quad)",addr:"13526 Whittier Blvd, Whittier",dist:"~2 mi",priority:true},
-  {id:2,co:"T-Mobile",name:"T-Mobile - Whittwood Ln",addr:"15582 Whittwood Ln, Whittier",dist:"~4 mi"},
-  {id:3,co:"T-Mobile",name:"T-Mobile - Norwalk",addr:"12059 Imperial Hwy A, Norwalk",dist:"~5 mi"},
-  {id:4,co:"T-Mobile",name:"T-Mobile - La Mirada",addr:"13920 Imperial Hwy, La Mirada",dist:"~6 mi"},
-  {id:5,co:"T-Mobile",name:"T-Mobile - La Habra",addr:"1216 S Idaho St, La Habra",dist:"~9 mi"},
-  {id:6,co:"T-Mobile",name:"T-Mobile - Rowland Heights (Colima)",addr:"17501 Colima Rd H, Rowland Heights",dist:"~10 mi"},
-  {id:7,co:"T-Mobile",name:"T-Mobile - Downey",addr:"12214 Lakewood Blvd, Downey",dist:"~12 mi"},
-  {id:8,co:"T-Mobile",name:"T-Mobile - Rowland Heights (Gale)",addr:"18916 Gale Ave, Rowland Heights",dist:"~12 mi"},
-  {id:9,co:"T-Mobile",name:"T-Mobile - Brea",addr:"2515 E Imperial Hwy C, Brea",dist:"~18 mi"},
-  {id:10,co:"AT&T",name:"AT&T - Whittier Blvd",addr:"13809 Whittier Blvd, Whittier",dist:"~2 mi",priority:true},
-  {id:11,co:"AT&T",name:"AT&T - Whittwood Ln",addr:"15714 Whittwood Ln, Whittier",dist:"~4 mi",priority:true},
-  {id:12,co:"AT&T",name:"AT&T - Pico Rivera",addr:"9077 Whittier Blvd, Pico Rivera",dist:"~7 mi"},
-  {id:13,co:"AT&T",name:"AT&T - Santa Fe Springs",addr:"11462 Telegraph Rd, Santa Fe Springs",dist:"~6 mi"},
-  {id:14,co:"AT&T",name:"AT&T - Hacienda Heights",addr:"17134 Colima Rd, Hacienda Heights",dist:"~8 mi"},
-  {id:15,co:"AT&T",name:"AT&T - La Habra",addr:"2000 W Imperial Hwy, La Habra",dist:"~9 mi"},
-  {id:16,co:"AT&T",name:"AT&T - Rowland Heights (Colima)",addr:"17342 Colima Rd, Rowland Heights",dist:"~10 mi"},
-  {id:17,co:"AT&T",name:"AT&T - Rowland Heights (Fullerton Rd)",addr:"1390 Fullerton Rd #103, Rowland Heights",dist:"~11 mi"},
-  {id:18,co:"AT&T",name:"AT&T - Rowland Heights (Nogales)",addr:"1015 S Nogales St #122B, Rowland Heights",dist:"~13 mi"},
-  {id:19,co:"AT&T",name:"AT&T - Downey (Firestone)",addr:"8420 Firestone Blvd, Downey",dist:"~12 mi"},
-  {id:20,co:"AT&T",name:"AT&T - Downey (Apollo)",addr:"8993 Apollo Way, Downey",dist:"~13 mi"},
-  {id:21,co:"AT&T",name:"AT&T - Brea",addr:"1643 E Imperial Hwy, Brea",dist:"~18 mi"},
-  {id:22,co:"AT&T",name:"AT&T - Fullerton",addr:"1345 S Harbor Blvd, Fullerton",dist:"~19 mi"},
-  {id:23,co:"Verizon",name:"Verizon - Whittier Blvd",addr:"15494 Whittier Blvd, Whittier",dist:"~4 mi",priority:true},
-  {id:24,co:"Verizon",name:"Verizon - La Habra",addr:"1401 W Imperial Hwy C, La Habra",dist:"~9 mi"},
-  {id:25,co:"Verizon",name:"Verizon - City of Industry",addr:"17525 Colima Rd, City of Industry",dist:"~10 mi"},
-  {id:26,co:"Verizon",name:"Verizon - Rowland Heights",addr:"1015 Nogales St #111, Rowland Heights",dist:"~13 mi"},
-  {id:27,co:"Verizon",name:"Verizon - Downey",addr:"12006 Lakewood Blvd, Downey",dist:"~12 mi"},
-  {id:28,co:"Verizon",name:"Verizon - Buena Park",addr:"5315 Beach Blvd, Buena Park",dist:"~17 mi"},
-  {id:29,co:"Verizon",name:"Verizon - Brea",addr:"2500 E Imperial Hwy, Brea",dist:"~18 mi"},
-  {id:30,co:"Spectrum",name:"Spectrum - Whittwood Ln",addr:"15496 Whittier Blvd #454, Whittier",dist:"~4 mi",priority:true},
-  {id:31,co:"Spectrum",name:"Spectrum - Pico Rivera",addr:"8642 Whittier Blvd, Pico Rivera",dist:"~7 mi"},
-  {id:32,co:"Spectrum",name:"Spectrum - Downey",addr:"12214 Lakewood Blvd, Downey",dist:"~12 mi"},
-  {id:33,co:"Best Buy",name:"Best Buy - City of Industry",addr:"17545 Gale Ave, City of Industry",dist:"~10 mi",priority:true},
-  {id:34,co:"Best Buy",name:"Best Buy - Montebello",addr:"2415 Via Campo, Montebello",dist:"~12 mi"},
-  {id:35,co:"Best Buy",name:"Best Buy - Downey",addr:"12118 Lakewood Blvd, Downey",dist:"~12 mi"},
-  {id:36,co:"Best Buy",name:"Best Buy - Fullerton (Imperial)",addr:"120 E Imperial Hwy, Fullerton",dist:"~14 mi"},
-  {id:37,co:"Best Buy",name:"Best Buy - Cerritos",addr:"12989 Park Plaza Dr, Cerritos",dist:"~17 mi"},
-  {id:38,co:"Best Buy",name:"Best Buy - Lakewood",addr:"5101 Clark Ave, Lakewood",dist:"~18 mi"},
-  {id:39,co:"Best Buy",name:"Best Buy - Fullerton (Orangefair)",addr:"123 E Orangefair Mall, Fullerton",dist:"~19 mi"},
-  {id:40,co:"Best Buy",name:"Best Buy - West Covina",addr:"1800 Plaza Dr, West Covina",dist:"~22 mi"},
-  {id:41,co:"Apple",name:"Apple Store - Los Cerritos Center",addr:"242 Los Cerritos Center, Cerritos",dist:"~17 mi",priority:true},
-  {id:42,co:"Apple",name:"Apple Store - Brea Mall",addr:"1016C Brea Mall, Brea",dist:"~18 mi",priority:true}
+  // T-MOBILE
+  { id:1,  co:"T-Mobile", name:"T-Mobile – Whittier Blvd (The Quad)", addr:"13526 Whittier Blvd, Whittier", dist:"~2 mi", priority:true },
+  { id:2,  co:"T-Mobile", name:"T-Mobile – Whittwood Ln", addr:"15582 Whittwood Ln, Whittier", dist:"~4 mi" },
+  { id:3,  co:"T-Mobile", name:"T-Mobile – Norwalk", addr:"12059 Imperial Hwy A, Norwalk", dist:"~5 mi" },
+  { id:4,  co:"T-Mobile", name:"T-Mobile – Pico Rivera area (La Mirada)", addr:"13920 Imperial Hwy, La Mirada", dist:"~6 mi" },
+  { id:5,  co:"T-Mobile", name:"T-Mobile – Santa Fe Springs", addr:"12059 Imperial Hwy, Norwalk", dist:"~5 mi" },
+  { id:6,  co:"T-Mobile", name:"T-Mobile – La Habra", addr:"1216 S Idaho St, La Habra", dist:"~9 mi" },
+  { id:7,  co:"T-Mobile", name:"T-Mobile – Rowland Heights (Colima)", addr:"17501 Colima Rd H, Rowland Heights", dist:"~10 mi" },
+  { id:8,  co:"T-Mobile", name:"T-Mobile – Downey (Lakewood Blvd)", addr:"12214 Lakewood Blvd, Downey", dist:"~12 mi" },
+  { id:9,  co:"T-Mobile", name:"T-Mobile – Rowland Heights (Gale Ave)", addr:"18916 Gale Ave, Rowland Heights", dist:"~12 mi", note:"Authorized retailer" },
+  { id:10, co:"T-Mobile", name:"T-Mobile – Brea (Imperial Hwy)", addr:"2515 E Imperial Hwy C, Brea", dist:"~18 mi" },
+
+  // AT&T
+  { id:11, co:"AT&T", name:"AT&T – Whittier Blvd", addr:"13809 Whittier Blvd, Whittier", dist:"~2 mi", priority:true },
+  { id:12, co:"AT&T", name:"AT&T – Whittwood Ln", addr:"15714 Whittwood Ln, Whittier", dist:"~4 mi", priority:true },
+  { id:13, co:"AT&T", name:"AT&T – Pico Rivera", addr:"9077 Whittier Blvd, Pico Rivera", dist:"~7 mi" },
+  { id:14, co:"AT&T", name:"AT&T – Santa Fe Springs", addr:"11462 Telegraph Rd, Santa Fe Springs", dist:"~6 mi" },
+  { id:15, co:"AT&T", name:"AT&T – Hacienda Heights", addr:"17134 Colima Rd, Hacienda Heights", dist:"~8 mi" },
+  { id:16, co:"AT&T", name:"AT&T – La Habra (Imperial Hwy)", addr:"2000 W Imperial Hwy, La Habra", dist:"~9 mi" },
+  { id:17, co:"AT&T", name:"AT&T – Rowland Heights (Colima)", addr:"17342 Colima Rd, Rowland Heights", dist:"~10 mi" },
+  { id:18, co:"AT&T", name:"AT&T – Rowland Heights (Fullerton Rd)", addr:"1390 Fullerton Rd #103, Rowland Heights", dist:"~11 mi" },
+  { id:19, co:"AT&T", name:"AT&T – Rowland Heights (Nogales)", addr:"1015 S Nogales St #122B, Rowland Heights", dist:"~13 mi" },
+  { id:20, co:"AT&T", name:"AT&T – Downey (Firestone Blvd)", addr:"8420 Firestone Blvd, Downey", dist:"~12 mi" },
+  { id:21, co:"AT&T", name:"AT&T – Downey (Apollo Way)", addr:"8993 Apollo Way, Downey", dist:"~13 mi" },
+  { id:22, co:"AT&T", name:"AT&T – Brea (Imperial Hwy)", addr:"1643 E Imperial Hwy, Brea", dist:"~18 mi" },
+  { id:23, co:"AT&T", name:"AT&T – Fullerton (Harbor Blvd)", addr:"1345 S Harbor Blvd, Fullerton", dist:"~19 mi" },
+
+  // VERIZON
+  { id:24, co:"Verizon", name:"Verizon – Whittier Blvd", addr:"15494 Whittier Blvd, Whittier", dist:"~4 mi", priority:true },
+  { id:25, co:"Verizon", name:"Verizon – La Habra (Imperial Hwy)", addr:"1401 W Imperial Hwy C, La Habra", dist:"~9 mi" },
+  { id:26, co:"Verizon", name:"Verizon – City of Industry (Colima)", addr:"17525 Colima Rd, City of Industry", dist:"~10 mi" },
+  { id:27, co:"Verizon", name:"Verizon – Rowland Heights (Nogales)", addr:"1015 Nogales St #111, Rowland Heights", dist:"~13 mi" },
+  { id:28, co:"Verizon", name:"Verizon – Downey (Lakewood Blvd)", addr:"12006 Lakewood Blvd, Downey", dist:"~12 mi" },
+  { id:29, co:"Verizon", name:"Verizon – Buena Park (Beach Blvd)", addr:"5315 Beach Blvd, Buena Park", dist:"~17 mi" },
+  { id:30, co:"Verizon", name:"Verizon – Brea (Imperial Hwy)", addr:"2500 E Imperial Hwy, Brea", dist:"~18 mi" },
+
+  // SPECTRUM
+  { id:31, co:"Spectrum", name:"Spectrum – Whittwood Ln", addr:"15496 Whittier Blvd #454, Whittier", dist:"~4 mi", priority:true },
+  { id:32, co:"Spectrum", name:"Spectrum – Pico Rivera (Whittier Blvd)", addr:"8642 Whittier Blvd, Pico Rivera", dist:"~7 mi" },
+  { id:33, co:"Spectrum", name:"Spectrum – Downey (Lakewood Blvd)", addr:"12214 Lakewood Blvd, Downey", dist:"~12 mi" },
+
+  // BEST BUY
+  { id:34, co:"Best Buy", name:"Best Buy – City of Industry (Gale Ave)", addr:"17545 Gale Ave, City of Industry", dist:"~10 mi", priority:true },
+  { id:35, co:"Best Buy", name:"Best Buy – Montebello (Via Campo)", addr:"2415 Via Campo, Montebello", dist:"~12 mi" },
+  { id:36, co:"Best Buy", name:"Best Buy – Downey (Lakewood Blvd)", addr:"12118 Lakewood Blvd, Downey", dist:"~12 mi" },
+  { id:37, co:"Best Buy", name:"Best Buy – Fullerton (Imperial Hwy)", addr:"120 E Imperial Hwy, Fullerton", dist:"~14 mi" },
+  { id:38, co:"Best Buy", name:"Best Buy – Fullerton (Orangefair Mall)", addr:"123 E Orangefair Mall, Fullerton", dist:"~19 mi" },
+  { id:39, co:"Best Buy", name:"Best Buy – Cerritos (Park Plaza Dr)", addr:"12989 Park Plaza Dr, Cerritos", dist:"~17 mi" },
+  { id:40, co:"Best Buy", name:"Best Buy – Lakewood (Clark Ave)", addr:"5101 Clark Ave, Lakewood", dist:"~18 mi" },
+  { id:41, co:"Best Buy", name:"Best Buy – West Covina (Plaza Dr)", addr:"1800 Plaza Dr, West Covina", dist:"~22 mi" },
+
+  // APPLE
+  { id:42, co:"Apple", name:"Apple Store – Brea Mall", addr:"1016C Brea Mall, Brea", dist:"~18 mi", priority:true },
+  { id:43, co:"Apple", name:"Apple Store – Los Cerritos Center", addr:"242 Los Cerritos Center, Cerritos", dist:"~17 mi", priority:true },
 ];
-const APPLY_LINKS={"T-Mobile":"https://careers.t-mobile.com","AT&T":"https://www.att.jobs","Verizon":"https://www.verizon.com/about/careers","Spectrum":"https://jobs.spectrum.com","Best Buy":"https://jobs.bestbuy.com","Apple":"https://jobs.apple.com"};
-const CO_KEY={"T-Mobile":"tmobile","AT&T":"att","Verizon":"verizon","Spectrum":"spectrum","Best Buy":"bestbuy","Apple":"apple"};
-const CO_ORDER=["T-Mobile","AT&T","Verizon","Spectrum","Best Buy","Apple"];
-const FILTERS=["All","T-Mobile","AT&T","Verizon","Spectrum","Best Buy","Apple","To-do","In-person"];
-let state={};
-let currentFilter="All";
-function loadState(){try{const s=localStorage.getItem("jt3");if(s)state=JSON.parse(s);}catch(e){}STORES.forEach(s=>{if(!state[s.id])state[s.id]={applied:false,visited:false};});}
-function saveState(){try{localStorage.setItem("jt3",JSON.stringify(state));}catch(e){}}
-function resetAll(){if(!confirm("Reset all?"))return;STORES.forEach(s=>{state[s.id]={applied:false,visited:false};});saveState();renderAll();}
-function toggle(id,type){state[id][type]=!state[id][type];saveState();updateCard(id);updateStats();}
-function updateStats(){const a=STORES.filter(s=>state[s.id].applied).length;const v=STORES.filter(s=>state[s.id].visited).length;const t=STORES.length;document.getElementById("cnt-applied").textContent=a;document.getElementById("cnt-visited").textContent=v;document.getElementById("cnt-total").textContent=t;document.getElementById("prog-label").textContent=a+" / "+t;document.getElementById("prog-fill").style.width=Math.round(a/t*100)+"%";}
-function statusClass(id){const s=state[id];if(s.applied&&s.visited)return"status-both";if(s.applied)return"status-applied";if(s.visited)return"status-visited";return"";}
-function buildBadges(store,id){const s=state[id];let h='<span class="badge badge-dist">'+store.dist+'</span>';if(store.priority)h+='<span class="badge badge-person">Go in person</span>';if(s.applied)h+='<span class="badge badge-applied">Applied</span>';if(s.visited)h+='<span class="badge badge-visited">Visited</span>';return h;}
-function updateCard(id){const el=document.getElementById("card-"+id);if(!el)return;const s=state[id];el.className=el.className.replace(/status-w+/g,"").trim()+" "+statusClass(id);el.querySelector(".cb-applied").checked=s.applied;el.querySelector(".cb-visited").checked=s.visited;el.querySelector(".badge-row").innerHTML=buildBadges(STORES.find(x=>x.id===id),id);}
-function setFilter(f){currentFilter=f;document.querySelectorAll(".filter-btn").forEach(b=>{b.classList.toggle("active",b.dataset.f===f);});renderList();}
-function filteredStores(){return STORES.filter(s=>{if(currentFilter==="All")return true;if(currentFilter==="To-do")return!state[s.id].applied;if(currentFilter==="In-person")return s.priority;return s.co===currentFilter;});}
-function renderList(){const list=document.getElementById("list");const stores=filteredStores();if(!stores.length){list.innerHTML='<div class="empty">No stores match.</div>';return;}const grouped={};stores.forEach(s=>{if(!grouped[s.co])grouped[s.co]=[];grouped[s.co].push(s);});let html="";CO_ORDER.forEach(co=>{if(!grouped[co])return;const key=CO_KEY[co];html+='<div class="group"><div class="group-header"><div class="company-dot dot-'+key+'"></div><div class="group-label">'+co+'</div><div class="group-count">'+grouped[co].length+'</div></div>';grouped[co].forEach(store=>{html+='<div class="store-card left-'+key+' '+statusClass(store.id)+'" id="card-'+store.id+'"><div class="checks"><label class="check-item"><input type="checkbox" class="cb-applied" '+(state[store.id].applied?"checked":"")+'onchange="toggle('+store.id+','applied')" ><span class="check-label">Applied</span></label><label class="check-item"><input type="checkbox" class="cb-visited" '+(state[store.id].visited?"checked":"")+'onchange="toggle('+store.id+','visited')" ><span class="check-label">Visited</span></label></div><div class="store-info"><div class="store-name">'+store.name+'</div><div class="store-addr">'+store.addr+'</div><div class="badge-row">'+buildBadges(store,store.id)+'</div><a class="apply-link" href="'+APPLY_LINKS[store.co]+'" target="_blank">Apply at '+store.co+'</a></div></div>';});html+="</div>";});list.innerHTML=html;}
-function renderFilters(){document.getElementById("filters").innerHTML=FILTERS.map(f=>'<button class="filter-btn'+(f===currentFilter?" active":"")+'" data-f="'+f+'" onclick="setFilter(''+f+'')">'+f+'</button>').join("");}
-function renderAll(){renderFilters();renderList();updateStats();}
-function isIOS(){return /iphone|ipad|ipod/i.test(navigator.userAgent)&&!window.MSStream;}
-function isStandalone(){return("standalone"in window.navigator)&&window.navigator.standalone;}
-if(isIOS()&&!isStandalone())document.getElementById("ios-tip").classList.remove("hidden");
-loadState();renderAll();
+
+const APPLY_LINKS = {
+  "T-Mobile":  "https://careers.t-mobile.com",
+  "AT&T":      "https://www.att.jobs",
+  "Verizon":   "https://www.verizon.com/about/careers",
+  "Spectrum":  "https://jobs.spectrum.com",
+  "Best Buy":  "https://jobs.bestbuy.com",
+  "Apple":     "https://jobs.apple.com",
+};
+
+const CO_KEY = { "T-Mobile":"tmobile", "AT&T":"att", "Verizon":"verizon", "Spectrum":"spectrum", "Best Buy":"bestbuy", "Apple":"apple" };
+const CO_ORDER = ["T-Mobile","AT&T","Verizon","Spectrum","Best Buy","Apple"];
+const FILTERS = ["All","T-Mobile","AT&T","Verizon","Spectrum","Best Buy","Apple","To-do","In-person"];
+
+let state = {};
+let currentFilter = "All";
+
+function loadState() {
+  try {
+    const saved = localStorage.getItem("jobtracker_v2");
+    if (saved) state = JSON.parse(saved);
+  } catch(e) {}
+  STORES.forEach(s => { if (!state[s.id]) state[s.id] = { applied:false, visited:false }; });
+}
+
+function saveState() {
+  try { localStorage.setItem("jobtracker_v2", JSON.stringify(state)); } catch(e) {}
+}
+
+function resetAll() {
+  if (!confirm("Reset all checkboxes?")) return;
+  STORES.forEach(s => { state[s.id] = { applied:false, visited:false }; });
+  saveState();
+  renderAll();
+}
+
+function toggle(id, type) {
+  state[id][type] = !state[id][type];
+  saveState();
+  updateCard(id);
+  updateStats();
+}
+
+function updateStats() {
+  const applied = STORES.filter(s => state[s.id].applied).length;
+  const visited = STORES.filter(s => state[s.id].visited).length;
+  const total = STORES.length;
+  document.getElementById("cnt-applied").textContent = applied;
+  document.getElementById("cnt-visited").textContent = visited;
+  document.getElementById("cnt-total").textContent = total;
+  document.getElementById("prog-label").textContent = applied + " / " + total;
+  document.getElementById("prog-fill").style.width = Math.round(applied / total * 100) + "%";
+}
+
+function statusClass(id) {
+  const s = state[id];
+  if (s.applied && s.visited) return "status-both";
+  if (s.applied) return "status-applied";
+  if (s.visited) return "status-visited";
+  return "";
+}
+
+function updateCard(id) {
+  const el = document.getElementById("card-" + id);
+  if (!el) return;
+  const s = state[id];
+  el.className = el.className.replace(/status-\w+/g, "").trim() + " " + statusClass(id);
+  el.querySelector(".cb-applied").checked = s.applied;
+  el.querySelector(".cb-visited").checked = s.visited;
+  const badges = el.querySelector(".badge-row");
+  const store = STORES.find(x => x.id === id);
+  badges.innerHTML = buildBadges(store, id);
+}
+
+function buildBadges(store, id) {
+  const s = state[id];
+  let h = `<span class="badge badge-dist">${store.dist}</span>`;
+  if (store.priority) h += `<span class="badge badge-person">Go in person</span>`;
+  if (s.applied) h += `<span class="badge badge-applied">Applied</span>`;
+  if (s.visited) h += `<span class="badge badge-visited">Visited</span>`;
+  return h;
+}
+
+function setFilter(f) {
+  currentFilter = f;
+  document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
+  document.querySelectorAll(".filter-btn").forEach(b => { if (b.dataset.f === f) b.classList.add("active"); });
+  renderList();
+}
+
+function filteredStores() {
+  return STORES.filter(s => {
+    if (currentFilter === "All") return true;
+    if (currentFilter === "To-do") return !state[s.id].applied;
+    if (currentFilter === "In-person") return s.priority;
+    return s.co === currentFilter;
+  });
+}
+
+function renderList() {
+  const list = document.getElementById("list");
+  const stores = filteredStores();
+  if (!stores.length) { list.innerHTML = '<div class="empty">No stores match this filter.</div>'; return; }
+
+  const grouped = {};
+  stores.forEach(s => { if (!grouped[s.co]) grouped[s.co] = []; grouped[s.co].push(s); });
+
+  let html = "";
+  CO_ORDER.forEach(co => {
+    if (!grouped[co]) return;
+    const key = CO_KEY[co];
+    html += `<div class="group">
+      <div class="group-header">
+        <div class="company-dot dot-${key}"></div>
+        <div class="group-label">${co}</div>
+        <div class="group-count">${grouped[co].length}</div>
+      </div>`;
+    grouped[co].forEach(store => {
+      html += `<div class="store-card left-${key} ${statusClass(store.id)}" id="card-${store.id}">
+        <div class="checks">
+          <label class="check-item">
+            <input type="checkbox" class="cb-applied" ${state[store.id].applied?"checked":""} onchange="toggle(${store.id},'applied')" aria-label="Applied: ${store.name}">
+            <span class="check-label">Applied</span>
+          </label>
+          <label class="check-item">
+            <input type="checkbox" class="cb-visited" ${state[store.id].visited?"checked":""} onchange="toggle(${store.id},'visited')" aria-label="Visited: ${store.name}">
+            <span class="check-label">Visited</span>
+          </label>
+        </div>
+        <div class="store-info">
+          <div class="store-name">${store.name}</div>
+          <div class="store-addr">${store.addr}</div>
+          <div class="badge-row">${buildBadges(store, store.id)}</div>
+          <a class="apply-link" href="${APPLY_LINKS[store.co]}" target="_blank" rel="noopener">
+            <svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M7 1h4v4M11 1L5 7M2 3H1v8h8V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Apply at ${store.co}
+          </a>
+        </div>
+      </div>`;
+    });
+    html += "</div>";
+  });
+  list.innerHTML = html;
+}
+
+function renderFilters() {
+  const wrap = document.getElementById("filters");
+  wrap.innerHTML = FILTERS.map(f =>
+    `<button class="filter-btn${f===currentFilter?" active":""}" data-f="${f}" onclick="setFilter('${f}')">${f}</button>`
+  ).join("");
+}
+
+function renderAll() {
+  renderFilters();
+  renderList();
+  updateStats();
+}
+
+// PWA Install
+let deferredPrompt = null;
+window.addEventListener("beforeinstallprompt", e => {
+  e.preventDefault();
+  deferredPrompt = e;
+  document.getElementById("install-banner").classList.remove("hidden");
+});
+document.getElementById("install-btn").addEventListener("click", async () => {
+  if (!deferredPrompt) return;
+  deferredPrompt.prompt();
+  const { outcome } = await deferredPrompt.userChoice;
+  deferredPrompt = null;
+  document.getElementById("install-banner").classList.add("hidden");
+});
+
+// iOS detection
+function isIOS() {
+  return /iphone|ipad|ipod/i.test(navigator.userAgent) && !window.MSStream;
+}
+function isInStandaloneMode() {
+  return ("standalone" in window.navigator) && window.navigator.standalone;
+}
+if (isIOS() && !isInStandaloneMode()) {
+  document.getElementById("ios-tip").classList.remove("hidden");
+}
+
+loadState();
+renderAll();
 </script>
 </body>
 </html>
